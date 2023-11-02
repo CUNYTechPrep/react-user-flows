@@ -1,62 +1,92 @@
-.quiz-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .quiz-background {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.quiz-card {
-    padding: 40px; 
-    border-radius: 15px; 
-    width: 60%; 
-    max-width: 900px; 
-    background: linear-gradient(45deg, #6EE7B7 0%, #3FA7D6 100%);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center; 
-}
+    .quiz-card {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: 5% 0;
+    }
 
-.quiz-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
-}
+    .option {
+        width: 80%;
+        height: 12%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2%;
+        color: white;
+        font-size: 1.2em;
+        margin: 1% 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 50px;
+    }
 
-label {
-    display: block;
-    margin: 20px 0 15px; 
-    font-weight: bold;
-    color: #fff;
-}
+    .option:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 
-input[type="text"] {
-    width: 80%; 
-    padding: 10px;
-    border-radius: 25px;
-    border: none;
-    margin: 0 auto 20px; 
-    outline: none;
-    background: rgba(255, 255, 255, 0.9);
-    display: block;
-}
+    .option-selected {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 
-button {
-    display: inline-block;
-    margin: 25px auto 0;
-    padding: 12px 20px; 
-    border: none;
-    border-radius: 25px;
-    background-color: #fff;
-    color: #007BFF;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
+    .quiz-icon {
+        width: 100px;  /* or whatever size you want for the circle */
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden; /* to ensure the image doesn't overflow the circular container */
+      }
+      
+      .quiz-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* to maintain the aspect ratio of the image */
+      }
 
-button:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
+    .quiz-title {
+        font-size: 2em;
+        color: white;
+        margin-bottom: 5%;
+    }
+
+    .button {
+        width: 50%;   
+        height: 170%;  
+        background-color: rgba(255, 0, 0, 0.6);
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 1.2em;
+        margin: 0 15%;
+        display: flex;         
+        justify-content: center; 
+        align-items: center;     
+        padding: 5px 20px;      
+    }
+
+    .buttons-container {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .back {
+        background-color: rgba(100, 100, 100, 0.6);
+    }
+    .question-label{
+        color: orange;
+      }
