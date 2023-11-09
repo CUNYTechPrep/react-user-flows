@@ -56,20 +56,6 @@ function QuizComponent() {
     }
   };
   const renderAnswers = () => {
-    const totalQuestions = questions.length;
-    let preferencesScore = 0;
-  
-    // Assuming 'Don't Care' is a neutral option that shouldn't affect the preferences score
-    const preferenceOptions = questions.map((question) => question.options.slice(0, -1));
-  
-    Object.keys(answers).forEach((questionId) => {
-      if (preferenceOptions[questionId - 1].includes(answers[questionId])) {
-        preferencesScore += 1;
-      }
-    });
-  
-    const scorePercentage = Math.round((preferencesScore / totalQuestions) * 100);
-  
     return (
       <div className="answers-container">
         <h2 className='Summary'>Your Answers Summary:</h2>
@@ -91,8 +77,6 @@ function QuizComponent() {
     );
   };
   
-  const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-
   return (
     <div className="quiz-background">
       {!submit ? (
@@ -110,7 +94,6 @@ function QuizComponent() {
             {option}
           </div>
         ))}
-        <div className="progress-bar" style={{width: `${progress}%`}}></div>
         <div className="buttons-container">
           <button className="button back" onClick={handleBackClick}>BACK</button>
           <button 

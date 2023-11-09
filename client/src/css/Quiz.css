@@ -5,23 +5,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .quiz-card {
     width: 80%;
-    height: 80%;
+    min-height: 80vh; 
+    max-height: 80vh; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: black;
     padding: 5% 0;
+    overflow: auto; 
 }
 
 .option {
     width: 80%;
-    height: 12%;
+    min-height: 65px; /* Set a minimum height for each option */
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
@@ -39,7 +41,6 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* .option-selected is used to highlight the selected option, so it's not unnecessary */
 .option-selected {
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -66,16 +67,16 @@
 .button {
     width: auto;
     height: auto;
-    max-width: 200px; /* Example of how to limit the button width if necessary */
-    padding: 10px 20px;  
+    max-width: 200px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
     border-radius: 20px;
     font-size: 1.2em;
     margin: 0 15%;
-    display: flex;         
-    justify-content: center; 
-    align-items: center;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons-container {
@@ -85,34 +86,32 @@
     justify-content: center;
     align-items: center;
 }
+
 .back, .next {
-    background-image: linear-gradient(to right, #ff416c, #ff4b2b); /* Gradient effect serves as the background */
-    width: 60%; /* Width relative to their container */
-    min-height: 65px; /* Minimum height for touch targets and visibility */
-    color: white; /* Text color for contrast */
-    font-size: 1.2em; /* Scaled font size for readability */
-    font-weight: bold; /* Bold text for emphasis */
-    letter-spacing: 1px; /* Spacing between letters for better readability */
-    border-radius: 20px; /* Rounded corners for aesthetics */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    cursor: pointer; /* Indicates interactiveness */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition for transform and shadow */
+    background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+    width: 60%;
+    min-height: 65px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .back:hover, .next:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-    transform: translateY(-2px); /* 'Lifts' the button on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
-
-
-
 
 .question-label {
     color: orange;
 }
 
-
 .answers-container {
+    flex-grow: 1;
     background: linear-gradient(to bottom right, #282828, #ff7e5f);
     width: 100%;
     display: flex;
@@ -146,10 +145,7 @@
 .answers-list li:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-    transition: transform 0.2s, background-color 0.3s ease;
-
 }
-
 
 .score-percentage {
     font-size: 2em;
@@ -177,21 +173,27 @@
 .button.restart {
     background-color: #2193b0;
     color: #fff;
-    padding: 8px 20px;
-    font-size: 0.9em;
+    padding: 10px 25px;
+    font-size: 1em;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
     display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .button.restart:hover {
     background-color: #6dd5ed;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.5);
 }
+
 .Summary{
     margin-top: 100px;
+    
 }
