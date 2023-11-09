@@ -23,7 +23,7 @@
 
 .option {
     width: 80%;
-    min-height: 65px; /* Set a minimum height for each option */
+    min-height: 65px;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
