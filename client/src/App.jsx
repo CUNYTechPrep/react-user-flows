@@ -1,11 +1,15 @@
 import React from 'react';
 import Quiz from './components/Quiz';
+import Address from './components/Address';
+
 
 function App() {
   return (
-    <div className="App">
-      <Quiz />
+    <div>
+      <h1>Address to Coordinates</h1>
+      <Address />
     </div>
+    
   );
 }
 

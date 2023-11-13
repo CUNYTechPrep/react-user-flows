@@ -1,34 +1,20 @@
-/* src/App.css */
 
-/* Container for the Address Input */
-.address-input-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    color:#ffffff;
 }
-
-/* Style for the Address Input Textbox */
-.address-input-container input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-/* Focus effect for the Address Input */
-.address-input-container input:focus {
-    border-color: #64b5f6;
-}
-
-/* Hover effect for the Address Input */
-.address-input-container input:hover {
-    border-color: #bbdefb;
+button[type="submit"] {
+    margin: 10px;
+    font-size: 14px;
+    
+    height: 35px;
+    
+  }
+input{
+    height: 25px;
 }
